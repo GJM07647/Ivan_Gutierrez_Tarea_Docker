@@ -28,7 +28,7 @@
 
 Primero descargo el plugin de `PortNavigator`  para poder configurar y crear redes desde Docker Desktop
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio1\imagenes ejercicio 1\1-Plugin portnavigator.png)
+![](.\imagenes ejercicio 1\1-Plugin portnavigator.png)
 
 
 
