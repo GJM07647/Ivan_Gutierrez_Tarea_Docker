@@ -27,7 +27,7 @@
 
 Ponemos tres servicios ,la propia aplicación `filebrowser` (son su imagen, su puerto, volúmenes usados , variables de entorno necesarias y la opción `restart` para reiniciarse en caso de problemas), una base de datos `mariaDB` (donde incluimos variables de entorno para la contraseña y nombre , y su propio volumen para persistir los datos), y un servidor `nginx`. Por último añadimos los volúmenes usados anteriormente.
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\1-docker compose yaml.png)
+![](./imagenes2/1-docker compose yaml.png)
 
 
 
@@ -39,33 +39,33 @@ $ docker compose up -d
 
 
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\2-ejecutando compose descarga y run.png)
+![](./imagenes2/2-ejecutando compose descarga y run.png)
 
 Vemos que se creo el multicontenedor compose desde Docker desktop
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\3-compose creado .png)
+![](./imagenes2/3-compose creado .png)
 
 
 
 Vemos los contenedores que lo componen :
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\4-contenedores creados.png)
+![](./imagenes2/4-contenedores creados.png)
 
 ##### **2.Aplicación funcionando **
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\5-entrada a aplicacion.png)
+![](./imagenes2/5-entrada a aplicacion.png)
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\6-aplicacion.png)
+![](./imagenes2/6-aplicacion.png)
 
 
 
 Vamos a realizar un par de operaciones para luego ver en las carpetas de los volúmenes si se registraron correctamente, primero subimos un fichero y luego cambiamos el idioma  a español.
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\7-fichero subido.png)
+![](./imagenes2/7-fichero subido.png)
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\8-lenguaje español.png)
+![](./imagenes2/8-lenguaje español.png)
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\9-español 2.png)
+![](./imagenes2/9-español 2.png)
 
 
 
@@ -73,15 +73,15 @@ Vamos a realizar un par de operaciones para luego ver en las carpetas de los vol
 
 Vemos las dos carpetas creadas para guardar los volúmenes y sus datos 
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\10-carpetas donde se acumulan datos.png)
+![](./imagenes2/10-carpetas donde se acumulan datos.png)
 
 Aquí es donde guarda los datos de configuración de la aplicación,como el cambio del idioma
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\11-config dir.png)
+![](./imagenes2/11-config dir.png)
 
 Aquí es donde guarda los datos como  los ficheros
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\12-data dir.png)
+![](./imagenes2/12-data dir.png)
 
 Podemos ver los volúmenes creados con este comando :
 
@@ -89,7 +89,7 @@ Podemos ver los volúmenes creados con este comando :
 $ docker volume ls
 ```
 
-![](C:\Users\Guty\Desktop\TAREA DOCKER\ejercicios\ejercicio2\imagenes ejercicio2\13-volumenes de bd y nginx.png)
+![](./imagenes2/13-volumenes de bd y nginx.png)
 
 NOTA: Al finalizar el ejercicio me doy cuenta que no es recomendable guardar los volúmenes en una ruta local con subcarpetas ya que si quiero exportar el proyecto en otro equipo tendría que crear todo ese árbol de subcarpetas, mejor configurar el `compose.yaml` con una ruta para los volúmenes mas sencilla como: `C:/` o `C:/volumenes`, en principio lo hice así para que quedaran guardados en la carpeta del ejercicio.
 
